@@ -13,11 +13,11 @@ class TestSignUp:
         driver.get(url)
         dashboard_page = DashboardPage(driver)
         # """
-        # Test Case: Login Flow Success
+        # Test Case: Sign Up Fresh User 
         # 1. Open Page
         # 2. Input Username & Password
-        # 3. Click Login
-        # 4. Verify Dashboard Visible
+        # 3. click Sign Up
+        # 4. Verify Account Registered
         # """
         dashboard_page.click_sign_up_button()
         dashboard_page.enter_username_sign_up(TestData.generate_random_username())
@@ -25,15 +25,16 @@ class TestSignUp:
         dashboard_page.click_sign_up()
         alert_text = dashboard_page.get_alert_text()
         assert alert_text == TestData.SUCCESS_SIGNUP_MSG
+
     def test_sign_up_existing_user(self, driver: WebDriver, url):
         driver.get(url)
         dashboard_page = DashboardPage(driver)
         # """
-        # Test Case: Login Flow Success
+        # Test Case: Sign Up Existing User 
         # 1. Open Page
         # 2. Input Username & Password
-        # 3. Click Login
-        # 4. Verify Dashboard Visible
+        # 3. click Sign Up
+        # 4. Verify Account Existing
         # """
         dashboard_page.click_sign_up_button()
         dashboard_page.enter_username_sign_up(TestData.REGISTERED_USERNAME)

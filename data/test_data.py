@@ -24,6 +24,7 @@ class TestData:
     REGISTERED_USERNAME = "andhika"
     REGISTERED_PASSWORD = "dhika123"
     SUCCESS_ADD_TO_CART_MSG = "Product added."
+    USER_DOES_NOT_EXIST = "User does not exist."
 
     # Data untuk form Place Order
     NAME="Andhika Test"

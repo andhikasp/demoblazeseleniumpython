@@ -41,3 +41,21 @@ class TestLogin:
         dashboard_page.click_log_in()
         alert_text = dashboard_page.get_alert_text()
         assert alert_text == TestData.WRONG_PASS_MSG
+    
+    def test_sign_in_unregistered(self, driver: WebDriver, url):
+
+        driver.get(url)
+        dashboard_page = DashboardPage(driver)
+        # """
+        # Test Case: Login Flow Unregistered Account
+        # 1. Open Page
+        # 2. Input Username & Input Password
+        # 3. Click Login
+        # 4. Verify Alert Message User does not exist.'
+        # """
+        dashboard_page.click_sign_in()
+        dashboard_page.enter_username_sign_in(TestData.generate_random_username())
+        dashboard_page.enter_password_sign_in(TestData.generate_random_password())
+        dashboard_page.click_log_in()
+        alert_text = dashboard_page.get_alert_text()
+        assert alert_text == TestData.USER_DOES_NOT_EXIST
