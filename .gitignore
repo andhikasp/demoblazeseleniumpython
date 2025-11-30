@@ -1,0 +1,30 @@
+
+pycache/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+--- Pytest Internal ---
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+--- Generated Reports & Screenshots (Agar repo tetap bersih) ---
+
+reports/
+assets/
+screenshots/
+*.log
+
+--- System Files ---
+
+.DS_Store
+Thumbs.db
+
+--- Editor Settings ---
+
+.vscode/
+.idea/
